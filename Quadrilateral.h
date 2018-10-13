@@ -2,7 +2,7 @@
 
 #include "Shape.h"
 
-#include "Triangle.h"
+#include "RightTriangle.h"
 
 class Quadrilateral : Shape{
 public:
@@ -16,6 +16,8 @@ protected:
     Point _B;
     Point _C;
     Point _D;
+
+    bool _isRectangle;
 
     float _sideA;
     float _sideB;

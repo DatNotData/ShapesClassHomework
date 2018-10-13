@@ -17,8 +17,10 @@ float Quadrilateral::getPerimeter(){
 }
 
 float Quadrilateral::getArea(){
-    Triangle t1(_A, _B, _C);
-    Triangle t2(_A, _D, _C);
+    RightTriangle t1(_A, _B, _C);
+    RightTriangle t2(_A, _D, _C);
+
+    _isRectangle = t1.isRightTriangle && t2.isRightTriangle;
 
     return t1.getArea() + t2.getArea();
 }
