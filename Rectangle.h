@@ -1,15 +1,9 @@
 #pragma once
 
-class Rectangle {
+#include "Quadrilateral.h"
+
+class Rectangle : public Quadrilateral{
 public:
-	Rectangle(float l, float w);
-	float getPerimeter();
-	float getArea();
-
-    void setLenght(float l);
-    void setWidth(float w);
-
-private:
-   	float lenght;
-	float width;
+	Rectangle(Point A, Point B, Point C, Point D): Quadrilateral(A, B, C, D){}
+	bool isRectangle();
 };

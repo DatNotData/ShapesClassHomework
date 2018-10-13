@@ -1,22 +1,9 @@
 #include "Rectangle.h"
 
-Rectangle::Rectangle(float l, float w) {
-	lenght = l;
-	width = w;
-}
-
-float Rectangle::getPerimeter() {
-	return 2 * (lenght + width);
-}
-
-float Rectangle::getArea() {
-	return lenght * width;
-}
-
-void Rectangle::setLenght(float l){
-    lenght = l;
-}
-
-void Rectangle::setWidth(float w){
-    width = w;
+bool Rectangle::isRectangle(){
+	this->getPerimeter();
+	bool retVal = _sideA == _sideC && _sideB == _sideD;
+	if(!retVal)
+		std::cout << "Error - This is not a rectangle." << std::endl;
+	return retVal;
 }

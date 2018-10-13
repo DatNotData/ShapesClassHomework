@@ -1,17 +1,21 @@
 #pragma once
 
-#include <math.h>
+#include "Shape.h"
 
-class Triangle {
+class Triangle : public Shape {
 public:
-	Triangle(float a, float b);
-	float getPerimeter();
-	float getArea();
+	Triangle(Point A, Point B, Point C);
 
-    void setSideA(float a);
-    void setSideB(float b);
+    float getPerimeter();
+    float getArea();
 
-private:
-	float sideA;
-	float sideB;
+protected:
+
+	Point _A;
+    Point _B;
+    Point _C;
+
+    float _sideA;
+    float _sideB;
+    float _sideC;
 };

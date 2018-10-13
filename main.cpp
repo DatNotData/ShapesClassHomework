@@ -1,25 +1,21 @@
 #include <iostream>
 
-#include "Rectangle.h"
-#include "Triangle.h"
+#include "RightTriangle.h"
+#include "Square.h"
 
-using namespace std;
+RightTriangle rtri(Point(0,0),Point(0,3),Point(4,0));
+Square sqr(Point(0,0), Point(0,3), Point(3,3), Point(3,0));
 
-Rectangle rectangle(1, 1);
-Triangle triangle(1, 1);
+int main(){
+    std::cout << "is right  : " << rtri.isRightTriangle() << std::endl;
+    std::cout << "area      : " << rtri.getArea() << std::endl;
+    std::cout << "perimeter : " << rtri.getPerimeter() << std::endl;
 
-int main() {
-    rectangle.setLenght(4);
-    rectangle.setWidth(2);
+    std::cout << std::endl;
 
-    triangle.setSideA(3);
-    triangle.setSideB(4);
+    std::cout << "is square : " << sqr.isSquare() << std::endl;
+    std::cout << "area      : " << sqr.getArea() << std::endl;
+    std::cout << "perimeter : " << sqr.getPerimeter() << std::endl;
 
-    std::cout << "Ouput : " << std::endl;
-	std::cout << "Rectangle perimeter : " << rectangle.getPerimeter() << std::endl;
-	std::cout << "Rectangle area      : " << rectangle.getArea() << std::endl;
-	std::cout << "Triangle perimeter  : " << triangle.getPerimeter() << std::endl;
-	std::cout << "Triangle area       : " << triangle.getArea() << std::endl;
-
-	return 0;
+    return 0;
 }
