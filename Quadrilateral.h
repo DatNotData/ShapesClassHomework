@@ -6,7 +6,14 @@
 
 class Quadrilateral : Shape{
 public:
-    Quadrilateral(Point A, Point B, Point C, Point D); // points must be sumbited in order
+    /**
+     * Points must be in order
+     * @param A top left corner
+     * @param B top right corner
+     * @param C bottom right corner
+     * @param D bottom left corner
+     */
+    Quadrilateral(Point A, Point B, Point C, Point D);
 
     float getArea();
     float getPerimeter();

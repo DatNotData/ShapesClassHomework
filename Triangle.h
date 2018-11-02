@@ -4,6 +4,11 @@
 
 class Triangle : public Shape {
 public:
+    /**
+     * @param A A corner of the triangle
+     * @param B Another corner of the triangle
+     * @param C Another corner of the triangle
+     */
 	Triangle(Point A, Point B, Point C);
 
     float getPerimeter();
